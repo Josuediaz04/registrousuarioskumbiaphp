@@ -1,0 +1,23 @@
+<h2>editar usuaruos</h2>
+
+<div class="row">
+    <?php echo Form::open('usuarios/editar', 'POST', 'class=col s12') ?>
+    <label >nombres
+         <?php echo Form::text('usuarios.nombres'); ?> 
+        </label>
+    <label >apellidos
+        <?php echo Form::text('usuarios.apellidos') ?>
+    </label>
+    <label >telefono
+    <?php echo Form::text('usuarios.telefono') ?>
+    </label>
+    <label>correo
+    <?php echo Form::text('usuarios.correo') ?>
+    </label>
+    <label >dui
+    <?php echo Form::text('usuarios.dui') ?>
+    </label>
+    <label>fecha de nacimiento
+    <?php echo Form::text('usuarios.nacimiento') ?>
+    </label>
+</div>

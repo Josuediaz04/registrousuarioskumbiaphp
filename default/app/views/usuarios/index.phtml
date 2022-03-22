@@ -1,0 +1,36 @@
+
+<br>
+<table class="bordered">
+    <thead>
+        <tr>
+         <th>ID</th>
+         <th>NOMBRE</th>
+         <th>APELLIDO</th>
+         <th>TELEFONO</th>
+         <th>CORREO</th>
+         <th>DUI</th>
+         <th>FECHA DE NACIMIENTO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php 
+            foreach($listUsuarios->items as $item):?>
+
+        <tr>
+            <td><?php  echo $item->id ?></td>
+            <td><?php  echo $item->nombres ?></td>
+            <td><?php  echo $item->apellidos ?></td>
+            <td><?php  echo $item->telefono ?></td>
+            <td><?php  echo $item->correo ?></td>
+            <td><?php  echo $item->dui?></td>
+            <td><?php  echo $item->nacimiento ?></td>
+        <td>
+            <?php echo Html::linkAction('borrar/'.$item->id, '<i class="material-icons">delete</i>','class="btn red"')?>
+            <?php echo Html::link('usuarios/editar/'.$item->id, '<i class="material-icons">create</i>','class="btn green"')?>
+        </td>
+        </tr>
+        <?php endforeach ?>
+
+    </tbody>
+</table>
+
